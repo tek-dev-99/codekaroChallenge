@@ -6,7 +6,7 @@ let addStudent=()=>{
     let checkStudent = students.filter((student)=>{
         return student.email == temEmail
     })
-    if(checkStudent.length == 0 && checkStudent.email != null){
+    if(checkStudent.length == 0 && temEmail !=''){
         let student={
             'name':temName,
             'email':temEmail,
