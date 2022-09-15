@@ -2,11 +2,11 @@ let students = []
 let addStudent=()=>{
      let temName=document.getElementById('name').value
      let temEmail=document.getElementById('email').value
-     let temRollNo=students.length+1
+     let  temRollNo=students.length+1    
     let checkStudent = students.filter((student)=>{
         return student.email == temEmail
     })
-    if(checkStudent.length == 0){
+    if(checkStudent.length == 0 && checkStudent.email != null){
         let student={
             'name':temName,
             'email':temEmail,
@@ -14,8 +14,8 @@ let addStudent=()=>{
         }
         students.push(student)
     }else{
-        console.log('Email Already Exist!')
-    }   
+        console.log('Something went To wrong!')
+    }
     console.log(students)
     document.getElementById('name').value='';
     document.getElementById('email').value='';  
